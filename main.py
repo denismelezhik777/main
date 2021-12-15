@@ -4,10 +4,10 @@ app = FastAPI()
 
 
 @app.get("/")
-async def root():
-    return {"message": "Hello"}
+async def root(value=0.1):
+    return value
 
 
-@app.get("/webhook")
-async def root():
-    return {}
+@app.post("/webhook")
+async def temperoutput(item):   
+    return root(item)
