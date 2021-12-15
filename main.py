@@ -8,7 +8,7 @@ PRUT = 0
 async def root():
     global PRUT, TEMP
     PRUT += 1
-    return PRUT, TEMP
+    return PRUT, TEMP["temperature"]
 
 
 @app.post("/webhook")
