@@ -11,5 +11,6 @@ async def root():
 @app.post("/webhook")
 async def temperoutput(item: dict):
     TEMP = item
+    print(item)
     return {"OK": True}
 
